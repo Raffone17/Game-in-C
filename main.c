@@ -85,7 +85,7 @@ void boss(int vet[dim][dim],int dif)
 
 
                 if(num==1){
-                    if(vet[i][l-1]==0&&l!=1){              // comportmaneto 1: va a sinistra oppure se non può spara
+                    if(vet[i][l-1]==0&&l!=1){              // comportmaneto 1: va a sinistra oppure se non puÃ² spara
                         vet[i][l]=0;
                         vet[i][l-1]=6;
                     }else{
@@ -96,7 +96,7 @@ void boss(int vet[dim][dim],int dif)
                         }
                     }
                     if(flag==0){
-                            spara=1+rand()%10;            // genera un numero fra 1 e 10 , se è pari lo sparo va a buon fine, altrimenti non spara
+                            spara=1+rand()%10;            // genera un numero fra 1 e 10 , se Ã¨ pari lo sparo va a buon fine, altrimenti non spara
                     if(spara%2==0){
                         vet[i+1][l]=5;
                         vet[i][l]=6;
@@ -110,7 +110,7 @@ void boss(int vet[dim][dim],int dif)
                     }
 
                 }
-                if(num==2){                            // comportamento 2: va su, e se non può spara
+                if(num==2){                            // comportamento 2: va su, e se non puÃ² spara
                     if(vet[i-1][l]==0&&i!=1){
                         vet[i][l]=0;
                         vet[i-1][l]=6;
@@ -138,7 +138,7 @@ void boss(int vet[dim][dim],int dif)
 
                 }
                 if(num==3){
-                    if(vet[i][l+1]==0&&l!=dim-2){         // comportamento 3: va a destra, e se non può spara
+                    if(vet[i][l+1]==0&&l!=dim-2){         // comportamento 3: va a destra, e se non puÃ² spara
                         vet[i][l]=0;
                         vet[i][l+1]=6;
                     }else{
@@ -167,7 +167,7 @@ void boss(int vet[dim][dim],int dif)
                 if(num==4){
                     if(vet[i+1][l]==0&&i!=(dim/2)-2){
                         vet[i][l]=0;
-                        vet[i+1][l]=6;                // comportamento 4: va giu, e se non può spara
+                        vet[i+1][l]=6;                // comportamento 4: va giu, e se non puÃ² spara
                     }else{
                         flag=0;
                     for(k=i+1;k<dim;k++){
@@ -243,13 +243,13 @@ void ia_boss2(int vet[dim][dim],int dif)
                 {
                     vet[i][l]=0;
                     vet[i][l-1]=6;
-                                               // questi due if servono perchè la navicella eviti un proiettile del compagno, se è possibile
+                                               // questi due if servono perchÃ¨ la navicella eviti un proiettile del compagno, se Ã¨ possibile
 
                 }else if((vet[i-1][l]==5&&vet[i][l+1]==0)||(vet[i-1][l]==15&&vet[i][l+1]==0))
                 {
                     vet[i][l]=0;
                     vet[i][l+1]=6;
-                                              // questi due if servono perchè la navicella eviti un proiettile del compagno, se è possibile
+                                              // questi due if servono perchÃ¨ la navicella eviti un proiettile del compagno, se Ã¨ possibile
 
 
                 }else{
@@ -271,7 +271,7 @@ void ia_boss2(int vet[dim][dim],int dif)
 
 
                 if(num==1){
-                    if(vet[i][l-1]==0&&l!=1){              // comportmaneto 1: va a sinistra oppure se non può spara
+                    if(vet[i][l-1]==0&&l!=1){              // comportmaneto 1: va a sinistra oppure se non puÃ² spara
                         vet[i][l]=0;
                         vet[i][l-1]=6;
                     }else{
@@ -282,7 +282,7 @@ void ia_boss2(int vet[dim][dim],int dif)
                         }
                     }
                     if(flag==0){
-                            spara=1+rand()%10;            // genera un numero fra 1 e 10 , se è pari lo sparo va a buon fine, altrimenti non spara
+                            spara=1+rand()%10;            // genera un numero fra 1 e 10 , se Ã¨ pari lo sparo va a buon fine, altrimenti non spara
                     if(spara%2==0){
                         if(vet[i+2][l]==0){
                           vet[i+1][l]=5;
@@ -298,7 +298,7 @@ void ia_boss2(int vet[dim][dim],int dif)
                     }
 
                 }
-                if(num==2){                            // comportamento 2: va su, e se non può spara
+                if(num==2){                            // comportamento 2: va su, e se non puÃ² spara
                     if(vet[i-1][l]==0&&i!=1){
                         vet[i][l]=0;
                         vet[i-1][l]=6;
@@ -328,7 +328,7 @@ void ia_boss2(int vet[dim][dim],int dif)
 
                 }
                 if(num==3){
-                    if(vet[i][l+1]==0&&l!=dim-2){         // comportamento 3: va a destra, e se non può spara
+                    if(vet[i][l+1]==0&&l!=dim-2){         // comportamento 3: va a destra, e se non puÃ² spara
                         vet[i][l]=0;
                         vet[i][l+1]=6;
                     }else{
@@ -359,7 +359,7 @@ void ia_boss2(int vet[dim][dim],int dif)
                 if(num==4){
                     if(vet[i+1][l]==0&&i!=(dim/2)-2){
                         vet[i][l]=0;
-                        vet[i+1][l]=6;                // comportamento 4: va giu, e se non può spara
+                        vet[i+1][l]=6;                // comportamento 4: va giu, e se non puÃ² spara
                     }else{
                         flag=0;
                     for(k=i+1;k<dim;k++){
@@ -442,7 +442,7 @@ void intelligenza_artificiale(int vet[dim][dim],int dif)         // Funzione che
                     }else{
                         vet[i][l-1]=13;
                     }
-                    vet[i][l]=0;                         // questi due if servono perchè la navicella eviti un proiettile del compagno, se è possibile
+                    vet[i][l]=0;                         // questi due if servono perchÃ¨ la navicella eviti un proiettile del compagno, se Ã¨ possibile
 
                 }else if(vet[i-1][l]==5&&vet[i][l+1]==0)
                 {
@@ -468,7 +468,7 @@ void intelligenza_artificiale(int vet[dim][dim],int dif)         // Funzione che
                        vet[i][l-1]=6;
                     }else{
                         vet[i][l-1]=13;
-                    }                // comportmaneto 1: va a sinistra oppure se non può spara
+                    }                // comportmaneto 1: va a sinistra oppure se non puÃ² spara
                         vet[i][l]=0;
 
                     }else{
@@ -479,7 +479,7 @@ void intelligenza_artificiale(int vet[dim][dim],int dif)         // Funzione che
                         }
                     }
                     if(flag==0){
-                            spara=1+rand()%10;            // genera un numero fra 1 e 10 , se è pari lo sparo va a buon fine, altrimenti non spara
+                            spara=1+rand()%10;            // genera un numero fra 1 e 10 , se Ã¨ pari lo sparo va a buon fine, altrimenti non spara
                     if(spara%2==0){
                             if(vet[i+2][l]==0){
                                 vet[i+1][l]=5;
@@ -494,7 +494,7 @@ void intelligenza_artificiale(int vet[dim][dim],int dif)         // Funzione che
                     }
 
                 }
-                if(num==2){                            // comportamento 2: va su, e se non può spara
+                if(num==2){                            // comportamento 2: va su, e se non puÃ² spara
                     if(vet[i-1][l]==0&&i!=1){
                     if(vet[i][l]==3){
                        vet[i-1][l]=6;
@@ -533,7 +533,7 @@ void intelligenza_artificiale(int vet[dim][dim],int dif)         // Funzione che
                        vet[i][l+1]=6;
                     }else{
                         vet[i][l+1]=13;
-                    }                                      // comportamento 3: va a destra, e se non può spara
+                    }                                      // comportamento 3: va a destra, e se non puÃ² spara
                         vet[i][l]=0;
 
                     }else{
@@ -567,7 +567,7 @@ void intelligenza_artificiale(int vet[dim][dim],int dif)         // Funzione che
                     }else{
                         vet[i+1][l]=13;
                     }
-                        vet[i][l]=0;                      // comportamento 4: va giu, e se non può spara
+                        vet[i][l]=0;                      // comportamento 4: va giu, e se non puÃ² spara
 
                     }else{
                         flag=0;
@@ -627,7 +627,7 @@ void intelligenza_artificiale(int vet[dim][dim],int dif)         // Funzione che
             {
                 if(vet[i-1][l]==8&&vet[i][l-1]==0)
                 {
-                    vet[i][l]=0;                             // questi due if servono perchè la navicella eviti un proiettile del compagno, se è possibile
+                    vet[i][l]=0;                             // questi due if servono perchÃ¨ la navicella eviti un proiettile del compagno, se Ã¨ possibile
                     vet[i][l-1]=9;
                 }else if(vet[i-1][l]==8&&vet[i][l+1]==0)
                 {
@@ -643,7 +643,7 @@ void intelligenza_artificiale(int vet[dim][dim],int dif)         // Funzione che
 
 
                 if(num==1){
-                    if(vet[i][l-1]==0&&l!=1){              // comportmaneto 1: va a sinistra oppure se non può spara
+                    if(vet[i][l-1]==0&&l!=1){              // comportmaneto 1: va a sinistra oppure se non puÃ² spara
                         vet[i][l]=0;
                         vet[i][l-1]=9;
                     }else{
@@ -654,7 +654,7 @@ void intelligenza_artificiale(int vet[dim][dim],int dif)         // Funzione che
                         }
                     }
                     if(flag==0){
-                            spara=1+rand()%10;            // genera un numero fra 1 e 10 , se è pari lo sparo va a buon fine, altrimenti non spara
+                            spara=1+rand()%10;            // genera un numero fra 1 e 10 , se Ã¨ pari lo sparo va a buon fine, altrimenti non spara
                     if(spara>7){
                       if(vet[i+2][l]==0){
                         vet[i+1][l]=8;
@@ -665,7 +665,7 @@ void intelligenza_artificiale(int vet[dim][dim],int dif)         // Funzione che
                     }
 
                 }
-                if(num==2){                            // comportamento 2: va su, e se non può spara
+                if(num==2){                            // comportamento 2: va su, e se non puÃ² spara
                     if(vet[i-1][l]==0&&i!=1){
                         vet[i][l]=0;
                         vet[i-1][l]=9;
@@ -690,7 +690,7 @@ void intelligenza_artificiale(int vet[dim][dim],int dif)         // Funzione che
 
                 }
                 if(num==3){
-                    if(vet[i][l+1]==0&&l!=dim-2){         // comportamento 3: va a destra, e se non può spara
+                    if(vet[i][l+1]==0&&l!=dim-2){         // comportamento 3: va a destra, e se non puÃ² spara
                         vet[i][l]=0;
                         vet[i][l+1]=9;
                     }else{
@@ -716,7 +716,7 @@ void intelligenza_artificiale(int vet[dim][dim],int dif)         // Funzione che
                 if(num==4){
                     if(vet[i+1][l]==0&&i!=(dim/2)-2){
                         vet[i][l]=0;
-                        vet[i+1][l]=9;                // comportamento 4: va giu, e se non può spara
+                        vet[i+1][l]=9;                // comportamento 4: va giu, e se non puÃ² spara
                     }else{
                         flag=0;
                     for(k=i+1;k<dim;k++){
@@ -782,7 +782,7 @@ int condizione_vittoria(int vet[dim][dim])            // Funzione per verificare
     for(i=0;i<dim;i++){
         for(l=0;l<dim;l++){
             if(vet[i][l]==3||vet[i][l]==7||vet[i][l]==10||vet[i][l]==12||vet[i][l]==14){                           //cerco la presenza sia del giocatore che dei nemici sul campo di gioco
-                flag=1;                                 // c'è un flag se trovo un nemico
+                flag=1;                                 // c'Ã¨ un flag se trovo un nemico
             }if(vet[i][l]==2){
                 giocatore=1;                            // un altro flag se trovo il giocatore
             }
@@ -792,7 +792,7 @@ int condizione_vittoria(int vet[dim][dim])            // Funzione per verificare
     if(flag==1&&giocatore==1)
     {
         return 0;
-    }else if(flag==0&&giocatore==1){                   //Secondo chi è stato trovato sul campo la funzione restituisce valori differenti
+    }else if(flag==0&&giocatore==1){                   //Secondo chi Ã¨ stato trovato sul campo la funzione restituisce valori differenti
         return 1;
     }else if(flag==1&&giocatore==0){
         return 2;
@@ -802,7 +802,7 @@ int condizione_vittoria(int vet[dim][dim])            // Funzione per verificare
 
 }
 
-void mossa_giocatore(int vet[dim][dim],int azione,int sound)                    // Funzione per le azioni che può fare il giocatore, premendo sul tastierino numerico
+void mossa_giocatore(int vet[dim][dim],int azione,int sound)                    // Funzione per le azioni che puÃ² fare il giocatore, premendo sul tastierino numerico
 {
 
 
@@ -1194,7 +1194,7 @@ void proiettile(int vet[dim][dim],int sound)           // funzione che calcola i
 
 }
 
-int colpito(int vet[dim][dim],int sound)          // funzione che controlla se un nemico o il giocatore è stato colpito, e nel caso cambia il suo valore con quello dell'esplosione
+int colpito(int vet[dim][dim],int sound)          // funzione che controlla se un nemico o il giocatore Ã¨ stato colpito, e nel caso cambia il suo valore con quello dell'esplosione
 {
     int i,l,punt=0;                   // variabili fra cui quella del punteggio
 
@@ -1210,7 +1210,7 @@ int colpito(int vet[dim][dim],int sound)          // funzione che controlla se u
                 }
                 }else{
 
-                vet[i][l]=4;                       // controlla se il nemico è stato colpito, se si lo trasforma in esplosione e fa beep e aggiunge punteggio
+                vet[i][l]=4;                       // controlla se il nemico Ã¨ stato colpito, se si lo trasforma in esplosione e fa beep e aggiunge punteggio
                 vet[i+1][l]=0;
                 punt+=2;
                 if (sound==1){
@@ -1219,14 +1219,14 @@ int colpito(int vet[dim][dim],int sound)          // funzione che controlla se u
                 }
 
             }else if(vet[i][l]==7&&vet[i+1][l]==1){
-                vet[i][l]=4;                       // controlla se il nemico bombardiere è stato colpito, se si lo trasforma in esplosione e fa beep
+                vet[i][l]=4;                       // controlla se il nemico bombardiere Ã¨ stato colpito, se si lo trasforma in esplosione e fa beep
                 vet[i+1][l]=0;
                 punt+=3;
                 if (sound==1){
                 Beep(250,50);
                 }
         }else if((vet[i][l]==10&&vet[i+1][l]==1)||(vet[i][l]==14&&vet[i+1][l]==1)){
-                vet[i][l]=4;                       // controlla se il boss è stato colpito
+                vet[i][l]=4;                       // controlla se il boss Ã¨ stato colpito
                 vet[i+1][l]=0;
                 punt+=25;
                 if (sound==1){
@@ -1238,30 +1238,21 @@ int colpito(int vet[dim][dim],int sound)          // funzione che controlla se u
 
     for(i=dim-2;i>0;i--){
         for(l=0;l<dim;l++){
-            if(vet[i][l]==2&&vet[i-1][l]==5){       // controlla se è stato colpito il giocatore
+            if(vet[i][l]==2&&vet[i-1][l]==5){       // controlla se Ã¨ stato colpito il giocatore
                 vet[i][l]=4;
                 vet[i-1][l]=0;
                 if (sound==1){
                 Beep(250,50);
                 }
             }
-             if(vet[i][l]==2&&vet[i-1][l]==8){       // controlla se è stato colpito il giocatore dalle bombe
+             if(vet[i][l]==2&&vet[i-1][l]==8){       // controlla se Ã¨ stato colpito il giocatore dalle bombe
                 vet[i][l]=4;
                 vet[i-1][l]=0;
                 if (sound==1){
                 Beep(250,50);
                 }
                 }
-            if(vet[i][l]==2&&vet[i-1][l-1]==8){       // controlla se è stato colpito il giocatore dalle bombe
-                vet[i][l]=4;
-                vet[i-1][l]=0;
-                vet[i][l-1]=4;
-                vet[i][l+1]=4;
-                if (sound==1){
-                Beep(250,50);
-                }
-                }
-            if(vet[i][l]==2&&vet[i-1][l+1]==8){       // controlla se è stato colpito il giocatore dalle bombe
+            if(vet[i][l]==2&&vet[i-1][l-1]==8){       // controlla se Ã¨ stato colpito il giocatore dalle bombe
                 vet[i][l]=4;
                 vet[i-1][l]=0;
                 vet[i][l-1]=4;
@@ -1270,7 +1261,16 @@ int colpito(int vet[dim][dim],int sound)          // funzione che controlla se u
                 Beep(250,50);
                 }
                 }
-            if(vet[i][l]==2&&vet[i-1][l]==15){       // controlla se è stato colpito il giocatore dalle bombe del boss
+            if(vet[i][l]==2&&vet[i-1][l+1]==8){       // controlla se Ã¨ stato colpito il giocatore dalle bombe
+                vet[i][l]=4;
+                vet[i-1][l]=0;
+                vet[i][l-1]=4;
+                vet[i][l+1]=4;
+                if (sound==1){
+                Beep(250,50);
+                }
+                }
+            if(vet[i][l]==2&&vet[i-1][l]==15){       // controlla se Ã¨ stato colpito il giocatore dalle bombe del boss
                 vet[i][l]=4;
                 vet[i-1][l]=0;
                 if (sound==1){
@@ -1364,7 +1364,7 @@ int main()                                    // funzione principale del gioco
                  disegna_schermo(campo,punteggio,vite,livello);      // disegno la schermata di gioco ed aspetto prima dell'inizio della partita
                  sleep_mil(1500);
 
-             while(vittoria==0)                   // ciclo while che fa continuare la partita finchè qualcuno non vince
+             while(vittoria==0)                   // ciclo while che fa continuare la partita finchÃ¨ qualcuno non vince
              {
                      clear_screen();
                      disegna_schermo(campo,punteggio,vite,livello);                 // ridisegno la schermata di gioco
@@ -1372,8 +1372,8 @@ int main()                                    // funzione principale del gioco
                      condizione=0;                          // imposto la condizione della pressione tasto a zero
 
 
-                     sleep_mil(velo);                          // velocità di gioco grazie ad uno sleep del programma
-                     condizione=kbhit();                    // se durante il periodo si è premuto un tasto allora viene imagazzinato il valore come mossa del giocatore,
+                     sleep_mil(velo);                          // velocitÃ  di gioco grazie ad uno sleep del programma
+                     condizione=kbhit();                    // se durante il periodo si Ã¨ premuto un tasto allora viene imagazzinato il valore come mossa del giocatore,
                      if(condizione==1){                     // altrimenti va avanti il gioco
                          mossa=getch();
                          mossa_giocatore(campo,mossa,suono);
@@ -1388,7 +1388,7 @@ int main()                                    // funzione principale del gioco
                      intelligenza_artificiale(campo,diff);       // avvio l'intelligenza artificiale
                      }
                      esplosione(campo);                     // calcello le esplosioni se ci sono
-                     punteggio+=colpito(campo,suono);                        // controllo chi è stato colpito e calcola il punteggio
+                     punteggio+=colpito(campo,suono);                        // controllo chi Ã¨ stato colpito e calcola il punteggio
                                           // eseguo la funzione dello spostamento dei proiettili
 
 
@@ -1406,7 +1406,7 @@ int main()                                    // funzione principale del gioco
                              printf("\n Inserire nome per record: ");
                              scanf("%s",nome);
                          }
-                         sleep_mil(1000);                                  // controllo le condizioni di vittoria, se nessuna è rispettata proseguo col gioco
+                         sleep_mil(1000);                                  // controllo le condizioni di vittoria, se nessuna Ã¨ rispettata proseguo col gioco
                      }else if(vittoria==2&&vite>1){                     // giocatore morto, ma ha ancora vite, quindi respawn del giocatore
                          system("cls");
                          disegna_schermo(campo,punteggio,vite,livello);
@@ -1551,7 +1551,7 @@ int main()                                    // funzione principale del gioco
 
 
 
-    printf("\n Grazie per aver giocato, PIRLA!\n");
+    printf("\n Grazie per aver giocato!\n");
     sleep_mil(3000);
     return 0;
 }
